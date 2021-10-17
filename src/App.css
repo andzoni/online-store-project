@@ -1,38 +1,143 @@
-.App {
+html, body {
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template: 'h h'
+    'a m'
+    'f f';
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 50px 100% 50px;
+}
+
+header {
+  background-color: #f77f00;
+  grid-area: h;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+aside {
+  align-items: center;
+  background-color: #fcbf49;
+  grid-area: a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  align-items: center;
+  background-color: #eae2b7;
   display: flex;
   flex-direction: column;
+  grid-area: m;
+}
+
+footer {
+  background-color: #d62828;
+  grid-area: f;
+  text-align: center;
+}
+
+.nav-side {
+  overflow-y: auto;
+}
+
+
+.aolado {
+  display: flex;
+  flex-direction: column;
+}
+
+.card1 {
+  background-color: white;
+  border: cornflowerblue solid 2px;
+  border-radius: 10px;
+  height: 250px;
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.card2 {
   align-items: center;
+  background-color: darkgray;
+  border: cornflowerblue solid 2px;
+  border-radius: 10px;
+  display: grid;
+  grid-template: 'tag1 tag2 tag3 tag4';
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  height: 60px;
+  margin: 5px;
+  padding: 10px;
+  width: 800px;
+}
+
+.card2H1 {
+  grid-area: tag1;
+}
+
+.card2H2 {
+  grid-area: tag2;
+  text-align: center;
+}
+
+.card2H3 {
+  grid-area: tag3;
+  text-align: center;
+}
+
+.card3 {
+  background-color: darkgray;
+  border: cornflowerblue solid 2px;
+  border-radius: 10px;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+  width: 380px;
+}
+
+h1 {
+  font-size: small;
+}
+
+img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counter {
+  align-items: center;
+  display: flex;
+  grid-area: tag4;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+}
+
+.counter h1 {
+  appearance: none;
+  background: #0052cc;
+  border: 0;
   color: white;
+  font-size: 20px;
+  line-height: 30px;
+  outline: 0;
+  text-align: center;
+  width: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter span {
+  color: #0052cc;
+  cursor: pointer;
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  user-select: none;
 }
