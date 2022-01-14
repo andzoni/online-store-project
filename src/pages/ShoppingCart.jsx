@@ -13,7 +13,7 @@ class ShoppingCart extends React.Component {
     );
 
     const full = (
-      <div>
+      <div className='shopcart'>
         { shopping.map((item) => (<Card key={ item.name } item={ item } />))}
         <Link
           data-testid="checkout-products"

@@ -21,13 +21,15 @@ class Home extends React.Component {
       shoppingList } = this.props;
     return (
       <div className="container">
-        <header>Loja</header>
+        <header>
+          <h2>Online Store</h2>
+        </header>
         <CategoriesList
           categories={ categories }
           handleChangeCategory={ handleChangeCategory }
         />
         <main>
-          <form>
+          <form className='mainForm'>
             <label
               type="text"
               data-testid="home-initial-message"
@@ -62,7 +64,9 @@ class Home extends React.Component {
             cart={ cart }
           />
         </main>
-        <footer>Contato</footer>
+        <footer>
+          <h4>Contacts</h4>
+        </footer>
       </div>
     );
   }
